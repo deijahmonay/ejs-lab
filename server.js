@@ -52,7 +52,12 @@ const RESTAURANT = {
 
 
 app.get('/', (req, res) => {
-  res.render('home.ejs');
+  res.render('home.ejs', {
+    RESTAURANT: RESTAURANT
+  });
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('Listening on port 3000');
+});
+
