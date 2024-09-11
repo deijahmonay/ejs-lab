@@ -65,7 +65,7 @@ app.get('/menu', (req, res) => {
 
 app.get('/menu/:category', (req, res) => {
   const category = req.params.category
-  
+  res.render('category.ejs',)
 })
 
 app.listen(3000, () => {
