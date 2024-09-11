@@ -7,17 +7,12 @@
 </head>
 <body>
   <%- include('./partials/nav') %>
-  <h1>Welcome to <%= RESTAURANT.name %></h1>
+  <h1>WELCOME</h1>
+
+  <ul>
+  <h2>Welcome to <%= RESTAURANT.name %></h2>
   <p>Address: <%= RESTAURANT.address %></p>
   <p>Phone: <%= RESTAURANT.phone %></p>
-  <ul>
-    <% RESTAURANT.menu.forEach((item, index) => { %>
-      <a href="/<%= index %>">
-      <li> 
-        <%= item.name %>: <%= item.price %>
-      </li>
-    </a>
-   <% }) %>
   </ul>
 
 <% let isOpen = true %>
