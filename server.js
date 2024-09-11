@@ -63,6 +63,11 @@ app.get('/menu', (req, res) => {
   });
 });
 
+app.get('/menu/:category', (req, res) => {
+  const category = req.params.category
+  
+})
+
 app.listen(3000, () => {
   console.log('Listening on port 3000');
 });
