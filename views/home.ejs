@@ -3,11 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Home | <%= RESTAURANT.name %></title>
 </head>
 <body>
+  <%- include('./partials/nav') %>
   <h1>Welcome to <%= RESTAURANT.name %></h1>
   <p>Address: <%= RESTAURANT.address %></p>
   <p>Phone: <%= RESTAURANT.phone %></p>
+  <ul>
+    <% RESTAURANT.menu.forEach((item, index) => { %>
+      <a href="/<%= index %>">
+      <li> 
+        <%= item.name %>: <%= item.price %>
+      </li>
+    </a>
+   <% }) %>
+  </ul>
+
+<% let isOpen = true %>
+
+<% if(isOpen === true) { %>
+  <p>Yes, we are open!</p>
+<% } else { %>
+  <p>Sorry, we are closed!</p>
+<% } %>
 </body>
 </html>
