@@ -7,7 +7,7 @@
 </head>
 <body>
   <%- include('./partials/nav') %>
-  <h1>WELCOME</h1>
+  <h1>WELCOME IN!</h1>
 
   <ul>
   <h2>Welcome to <%= RESTAURANT.name %></h2>
@@ -15,12 +15,5 @@
   <p>Phone: <%= RESTAURANT.phone %></p>
   </ul>
 
-<% let isOpen = true %>
-
-<% if(isOpen === true) { %>
-  <p>Yes, we are open!</p>
-<% } else { %>
-  <p>Sorry, we are closed!</p>
-<% } %>
 </body>
 </html>
